@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Classroom</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showTab('welcome')">Welcome</a>
+        <a href="#" onclick="showTab('biography')">Biography</a>
+        <a href="#" onclick="showTab('love-teaching')">What I Love About Teaching</a>
+        <a href="#" onclick="showTab('schedule')">Teaching Schedule</a>
+        <a href="#" onclick="showTab('contact')">Contact Me</a>
+    </nav>
+
+    <section id="welcome" class="tab-content active">
+        <h2>Welcome</h2>
+        <p>Hello students and families! My name is [Your Name], and I am so excited to be your teacher this year. I look forward to getting to know each of you and working together to make this a fantastic learning experience.</p>
+        <img src="teacher-photo.jpg" alt="Your photo">
+    </section>
+
+    <section id="biography" class="tab-content">
+        <h2>Biography / Education / Background</h2>
+        <p>I have always been passionate about teaching. My journey started when [insert your story]. I earned my degree in [Your Degree] from [Your University], and I have been teaching for [X years]. My goal has always been to inspire my students to love learning as much as I do.</p>
+    </section>
+
+    <section id="love-teaching" class="tab-content">
+        <h2>What I Love About Teaching</h2>
+        <p>Teaching allows me to make a difference in my students' lives. I love seeing the "aha!" moments when a concept clicks. It’s also rewarding to foster a classroom environment where everyone feels valued and encouraged to succeed.</p>
+    </section>
+
+    <section id="schedule" class="tab-content">
+        <h2>Teaching Schedule</h2>
+        <ul>
+            <li>8:00 AM - 9:00 AM: Math</li>
+            <li>9:15 AM - 10:15 AM: Science</li>
+            <li>10:30 AM - 11:30 AM: English</li>
+            <li>12:30 PM - 1:30 PM: History</li>
+            <li>1:45 PM - 2:45 PM: Art</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="tab-content">
+        <h2>Contact Me</h2>
+        <p>Email: teacher@example.com</p>
+        <p>Phone: (555) 123-4567</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
